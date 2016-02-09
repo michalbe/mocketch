@@ -6,7 +6,8 @@ define([
 
   return {
     container: $('#mocketch-content'),
-    appName: 'Mocketch',
+    header: $('#mocketch-header'),
+    appName: 'Mocketch.com',
     $: $,
     _: _
   };
