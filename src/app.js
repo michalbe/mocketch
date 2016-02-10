@@ -13,8 +13,10 @@ require.config({
 
 require([
   'views/main/main',
-], function(MainView) {
+  'views/header/header',
+], function(MainView, HeaderView) {
 
   MainView.init();
-
+  HeaderView.init();
+  
 });
