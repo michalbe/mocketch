@@ -5,7 +5,9 @@ define([
   'text!./library.html'
 ], function(M, template) {
 
-  var render = function() {
+  var renderTo = function(container) {
+    var _ = M._;
+
     var files = [
       {
         name: 'First Screen',
@@ -20,14 +22,14 @@ define([
         src: '../temp_images/3.png'
       }
     ];
-    var compiledTemplate = M._.template(template);
+    var compiledTemplate = _.template(template);
 
-    M.container.html(compiledTemplate({
+    container.html(compiledTemplate({
       files: files
     }));
   };
 
   return {
-    render: render
+    renderTo: renderTo
   };
 });
