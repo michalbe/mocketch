@@ -75,4 +75,10 @@ footer {
 
 .library-element {
   width: 100px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.library-element:hover {
+  transform: scale(1.1);
 }

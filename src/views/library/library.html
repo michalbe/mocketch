@@ -1,6 +1,6 @@
 <% _.each(files, function(file) {%>
-  <div class="mui-panel library-element">
+  <div class="mui-panel library-element" data-id="<%= file.id %>">
     <div><%= file.name %></div>
     <img class="thumb" src="<%= file.src %>">
   </div>
-<% }) %>
+<% }); %>
