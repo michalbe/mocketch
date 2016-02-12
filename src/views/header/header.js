@@ -5,7 +5,7 @@ define([
   'text!./header.html'
 ], function(M, template) {
 
-  var init = function() {
+  var render = function() {
     var compiledTemplate = M._.template(template);
 
     M.header.html(compiledTemplate({
@@ -14,6 +14,6 @@ define([
   };
 
   return {
-    init: init
+    render: render
   };
 });

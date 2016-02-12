@@ -12,11 +12,24 @@ require.config({
 });
 
 require([
+  'm',
   'views/main/main',
   'views/header/header',
-], function(MainView, HeaderView) {
+  'views/drawing-desktop/drawing-desktop',
+], function(M, MainView, HeaderView, DrawingDesktop) {
+  var $ = M.$;
 
-  MainView.init();
-  HeaderView.init();
-  
+  MainView.render();
+  HeaderView.render();
+
+  var VIEWS = {
+    'drawing-desktop': DrawingDesktop
+  };
+
+  $(document).on('render-view', function(evt, data) {
+    if (data.view in VIEWS) {
+      console.log('przeszło');
+      VIEWS[data.view].render();
+    }
+  });
 });
